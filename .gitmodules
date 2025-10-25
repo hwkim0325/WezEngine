@@ -1,0 +1,3 @@
+[submodule "Wez/vendor/spdlog"]
+	path = Wez/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
