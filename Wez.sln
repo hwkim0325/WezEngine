@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wez", "Wez\Wez.vcxproj", "{7B32880B-E73B-887C-70B7-9E7CDCBF937C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WezEngine", "WezEngine\WezEngine.vcxproj", "{D1A59516-3D10-4A8D-864E-FB32F2F727E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Dist|x64 = Dist|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Debug|x64.ActiveCfg = Debug|x64
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Debug|x64.Build.0 = Debug|x64
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Dist|x64.ActiveCfg = Dist|x64
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Dist|x64.Build.0 = Dist|x64
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Release|x64.ActiveCfg = Release|x64
+		{7B32880B-E73B-887C-70B7-9E7CDCBF937C}.Release|x64.Build.0 = Release|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Debug|x64.ActiveCfg = Debug|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Debug|x64.Build.0 = Debug|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Dist|x64.ActiveCfg = Dist|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Dist|x64.Build.0 = Dist|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Release|x64.ActiveCfg = Release|x64
+		{D1A59516-3D10-4A8D-864E-FB32F2F727E2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
