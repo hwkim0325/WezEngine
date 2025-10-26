@@ -2,8 +2,8 @@
 
 #include "Core.h"
 
-namespace Wez
-{
+namespace Wez {
+
 	class WEZ_API Application
 	{
 	public:
