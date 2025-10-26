@@ -1,8 +1,8 @@
 #pragma once
 
 //For use by Wez Applications
-#include <stdio.h>
 #include "Wez/Application.h"
+#include "Wez/Log.h"
 
 // --Entry Point--
 #include "Wez/EntryPoint.h"
