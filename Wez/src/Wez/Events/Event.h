@@ -1,9 +1,6 @@
 #pragma once
 
-#include "Wez/Core.h"
-
-#include <string>
-#include <functional>
+#include "Core.h"
 
 namespace Wez {
 

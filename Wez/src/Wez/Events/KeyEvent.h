@@ -1,8 +1,6 @@
 #pragma once
 
-#include "Wez/Events/Event.h"
-
-#include <sstream>
+#include "Event.h"
 
 namespace Wez {
 

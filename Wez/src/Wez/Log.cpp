@@ -1,4 +1,5 @@
 
+#include "wezpch.h"
 #include "Log.h"
 
 namespace Wez {

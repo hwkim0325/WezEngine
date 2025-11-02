@@ -4,6 +4,9 @@
     <Filter Include="Wez">
       <UniqueIdentifier>{7B32880B-E73B-887C-70B7-9E7CDCBF937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wez\Events">
+      <UniqueIdentifier>{FFE532ED-EB9D-743A-54A5-4D96407C0F2B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Wez.h" />
@@ -16,6 +19,18 @@
     <ClInclude Include="src\Wez\EntryPoint.h">
       <Filter>Wez</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wez\Events\ApplicationEvent.h">
+      <Filter>Wez\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wez\Events\Event.h">
+      <Filter>Wez\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wez\Events\KeyEvent.h">
+      <Filter>Wez\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wez\Events\MouseEvent.h">
+      <Filter>Wez\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wez\Log.h">
       <Filter>Wez</Filter>
     </ClInclude>
@@ -23,6 +38,7 @@
     <ClInclude Include="src\Wez\Events\Event.h" />
     <ClInclude Include="src\Wez\Events\KeyEvent.h" />
     <ClInclude Include="src\Wez\Events\MouseEvent.h" />
+    <ClInclude Include="src\wezpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp">
@@ -31,5 +47,6 @@
     <ClCompile Include="src\Wez\Log.cpp">
       <Filter>Wez</Filter>
     </ClCompile>
+    <ClCompile Include="src\wezpch.cpp" />
   </ItemGroup>
 </Project>
