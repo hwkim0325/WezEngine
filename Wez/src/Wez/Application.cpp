@@ -1,14 +1,31 @@
 #include "Application.h"
 
-Wez::Application::Application()
-{
-}
+#include "Events/ApplicationEvent.h"
+#include "Log.h"
 
-Wez::Application::~Application()
-{
-}
+namespace Wez {
 
-void Wez::Application::Run()
-{
-	while (true);
+	Application::Application()
+	{
+	}
+
+	Application::~Application()
+	{
+	}
+
+	void Application::Run()
+	{
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			WEZ_TRACE(e.ToString());
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			WEZ_TRACE(e.ToString());
+		}
+
+		while (true);
+	}
+
 }

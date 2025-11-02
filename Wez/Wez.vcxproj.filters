@@ -19,6 +19,10 @@
     <ClInclude Include="src\Wez\Log.h">
       <Filter>Wez</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wez\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Wez\Events\Event.h" />
+    <ClInclude Include="src\Wez\Events\KeyEvent.h" />
+    <ClInclude Include="src\Wez\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp">
