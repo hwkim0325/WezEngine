@@ -39,6 +39,8 @@
     <ClInclude Include="src\Wez\Events\KeyEvent.h" />
     <ClInclude Include="src\Wez\Events\MouseEvent.h" />
     <ClInclude Include="src\wezpch.h" />
+    <ClInclude Include="src\Wez\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp">
@@ -48,5 +50,6 @@
       <Filter>Wez</Filter>
     </ClCompile>
     <ClCompile Include="src\wezpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

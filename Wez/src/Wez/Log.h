@@ -29,11 +29,9 @@ namespace Wez {
 #define WEZ_CORE_ERROR(...)		::Wez::Log::GetCorelogger()->error(__VA_ARGS__)
 #define WEZ_CORE_FATAL(...)		::Wez::Log::GetCorelogger()->fatal(__VA_ARGS__)
 
-
 // Client log macros
 #define WEZ_TRACE(...)			::Wez::Log::GetClinetLogger()->trace(__VA_ARGS__)
 #define WEZ_INFO(...)			::Wez::Log::GetClinetLogger()->info(__VA_ARGS__)
 #define WEZ_WARN(...)			::Wez::Log::GetClinetLogger()->warn(__VA_ARGS__)
 #define WEZ_ERROR(...)			::Wez::Log::GetClinetLogger()->error(__VA_ARGS__)
 #define WEZ_FATAL(...)			::Wez::Log::GetClinetLogger()->fatal(__VA_ARGS__)
-

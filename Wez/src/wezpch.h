@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Wez/Log.h"
+
 #ifdef WEZ_PLATFORM_WINDOWS
 	#include <windows.h>
 #endif
