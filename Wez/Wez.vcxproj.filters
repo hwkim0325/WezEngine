@@ -41,6 +41,7 @@
     <ClInclude Include="src\wezpch.h" />
     <ClInclude Include="src\Wez\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="vendor\spdlog\include\spdlog\spdlog.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp">
