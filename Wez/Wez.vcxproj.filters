@@ -42,6 +42,8 @@
     <ClInclude Include="src\Wez\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="vendor\spdlog\include\spdlog\spdlog.h" />
+    <ClInclude Include="src\Wez\Layer.h" />
+    <ClInclude Include="src\Wez\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp">
@@ -52,5 +54,7 @@
     </ClCompile>
     <ClCompile Include="src\wezpch.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Wez\Layer.cpp" />
+    <ClCompile Include="src\Wez\LayerStack.cpp" />
   </ItemGroup>
 </Project>

@@ -85,7 +85,7 @@
       <AdditionalIncludeDirectories>Wez/Events;$(SolutionDir)Wez\vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
@@ -135,7 +135,7 @@
       <AdditionalIncludeDirectories>Wez/Events;$(SolutionDir)Wez\vendor\spdlog\include;$(SolutionDir)vendor\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -159,6 +159,8 @@
     <ClInclude Include="src\Wez\Events\Event.h" />
     <ClInclude Include="src\Wez\Events\KeyEvent.h" />
     <ClInclude Include="src\Wez\Events\MouseEvent.h" />
+    <ClInclude Include="src\Wez\Layer.h" />
+    <ClInclude Include="src\Wez\LayerStack.h" />
     <ClInclude Include="src\Wez\Log.h" />
     <ClInclude Include="src\wezpch.h" />
     <ClInclude Include="src\Wez\Window.h" />
@@ -167,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Wez\Application.cpp" />
+    <ClCompile Include="src\Wez\Layer.cpp" />
+    <ClCompile Include="src\Wez\LayerStack.cpp" />
     <ClCompile Include="src\Wez\Log.cpp" />
     <ClCompile Include="src\wezpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
