@@ -8,7 +8,17 @@ workspace "Wez"
 		"Dist"
 	}
 
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}" 
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Wez/vendor/GLFW/include"
+IncludeDir["Glad"] = "Wez/vendor/Glad/include"
+IncludeDir["ImGui"] = "Wez/vendor/imgui"
+
+include "Wez/vendor/GLFW"
+include "Wez/vendor/Glad"
+include "Wez/vendor/imgui"
 
 project "Wez"
 	location "Wez"
@@ -18,6 +28,9 @@ project "Wez"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "wezpch.h"
+	pchsource "Wez/src/wezpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -26,42 +39,58 @@ project "Wez"
 
 	includedirs
 	{
-		"Wez/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/vendor/imgui/backends",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"Glad",
+		"ImGui",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0"
-		
+		systemversion "latest"
+
 		defines
 		{
 			"WEZ_PLATFORM_WINDOWS",
 			"WEZ_BUILD_DLL",
-			"_WINDLL"
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/WezEngine")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
 		defines "WEZ_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "WEZ_RELEASE"
-		symbols "On"
+		buildoptions "/MD"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "WEZ_DIST"
-		symbols "On"
+		buildoptions "/MD"
+		optimize "On"
 
 project "WezEngine"
 	location "WezEngine"
 	kind "ConsoleApp"
-		language "C++"
+	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -86,8 +115,8 @@ project "WezEngine"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0"
-		
+		systemversion "latest"
+
 		defines
 		{
 			"WEZ_PLATFORM_WINDOWS"
@@ -95,15 +124,14 @@ project "WezEngine"
 
 	filter "configurations:Debug"
 		defines "WEZ_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "WEZ_RELEASE"
-		symbols "On"
+		buildoptions "/MD"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "WEZ_DIST"
-		symbols "On"
-
-	filter {"system:windows", "configurations:Release"}
-		buildoptions "/MT"
+		buildoptions "/MD"

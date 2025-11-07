@@ -1,14 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Wez">
       <UniqueIdentifier>{7B32880B-E73B-887C-70B7-9E7CDCBF937C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Wez\Events">
       <UniqueIdentifier>{FFE532ED-EB9D-743A-54A5-4D96407C0F2B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Wez\ImGui">
+      <UniqueIdentifier>{E557A9E0-51C2-5D57-9A00-0FFD06AA3BAC}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wez.h" />
     <ClInclude Include="src\Wez\Application.h">
       <Filter>Wez</Filter>
@@ -31,31 +49,45 @@
     <ClInclude Include="src\Wez\Events\MouseEvent.h">
       <Filter>Wez\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Wez\ImGui\ImGuiLayer.h">
+      <Filter>Wez\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wez\Layer.h">
+      <Filter>Wez</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Wez\LayerStack.h">
+      <Filter>Wez</Filter>
+    </ClInclude>
     <ClInclude Include="src\Wez\Log.h">
       <Filter>Wez</Filter>
     </ClInclude>
-    <ClInclude Include="src\Wez\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Wez\Events\Event.h" />
-    <ClInclude Include="src\Wez\Events\KeyEvent.h" />
-    <ClInclude Include="src\Wez\Events\MouseEvent.h" />
+    <ClInclude Include="src\Wez\Window.h">
+      <Filter>Wez</Filter>
+    </ClInclude>
     <ClInclude Include="src\wezpch.h" />
-    <ClInclude Include="src\Wez\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="vendor\spdlog\include\spdlog\spdlog.h" />
-    <ClInclude Include="src\Wez\Layer.h" />
-    <ClInclude Include="src\Wez\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Wez\Application.cpp">
+      <Filter>Wez</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wez\ImGui\ImGuiLayer.cpp">
+      <Filter>Wez\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wez\Layer.cpp">
+      <Filter>Wez</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Wez\LayerStack.cpp">
       <Filter>Wez</Filter>
     </ClCompile>
     <ClCompile Include="src\Wez\Log.cpp">
       <Filter>Wez</Filter>
     </ClCompile>
     <ClCompile Include="src\wezpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Wez\Layer.cpp" />
-    <ClCompile Include="src\Wez\LayerStack.cpp" />
-    <ClCompile Include="vendor\glad\src\glad.c" />
   </ItemGroup>
 </Project>
