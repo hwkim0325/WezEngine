@@ -95,7 +95,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Wez\Wez.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Wez\Wez.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Wez\Wez.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Wez\Wez.dll ..\bin\Debug-windows-x86_64\WezEngine &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Wez\Wez.dll ..\bin\Debug-windows-x86_64\WezEngine &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,7 +123,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Wez\Wez.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Wez\Wez.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Wez\Wez.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Wez\Wez.dll ..\bin\Release-windows-x86_64\WezEngine &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Wez\Wez.dll ..\bin\Release-windows-x86_64\WezEngine &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -151,11 +151,10 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Wez\Wez.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Wez\Wez.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Wez\Wez.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Wez\Wez.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Wez\Wez.dll ..\bin\Dist-windows-x86_64\WezEngine &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Wez\Wez.dll ..\bin\Dist-windows-x86_64\WezEngine &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Wez.h" />
     <ClInclude Include="src\Wez\Application.h" />
@@ -173,7 +172,6 @@
     <ClInclude Include="src\wezpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Wez\Application.cpp" />
     <ClCompile Include="src\Wez\ImGui\ImGuiLayer.cpp" />
