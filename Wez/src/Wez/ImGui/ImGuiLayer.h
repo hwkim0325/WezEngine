@@ -4,7 +4,7 @@
 
 namespace Wez {
 
-	class ImGuiLayer : public Layer
+	class WEZ_API ImGuiLayer : public Layer
 	{
 	public:
 		ImGuiLayer();
@@ -16,7 +16,7 @@ namespace Wez {
 		void OnEvent(Event& event);
 
 	private :
-
+		float m_Time = 0.0f;
 	};
 
 }

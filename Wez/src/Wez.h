@@ -5,6 +5,8 @@
 #include "Wez/Layer.h"
 #include "Wez/Log.h"
 
+#include "Wez/ImGui/ImGuiLayer.h"
+
 // --Entry Point--
 #include "Wez/EntryPoint.h"
 // ---------------

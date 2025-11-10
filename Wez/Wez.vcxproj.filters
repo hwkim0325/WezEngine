@@ -59,6 +59,7 @@
       <Filter>Wez</Filter>
     </ClInclude>
     <ClInclude Include="src\wezpch.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -80,5 +81,6 @@
       <Filter>Wez</Filter>
     </ClCompile>
     <ClCompile Include="src\wezpch.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

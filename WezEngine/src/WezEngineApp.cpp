@@ -26,6 +26,7 @@ public :
 	WezEngine()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Wez::ImGuiLayer());
 	}
 
 	~WezEngine()
