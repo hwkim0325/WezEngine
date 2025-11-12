@@ -21,7 +21,8 @@ group "Dependencies"
 	include "Wez/vendor/Glad"
 	include "Wez/vendor/imgui"
 
-group ""
+group ""
+startproject "WezEngine"
 
 project "Wez"
 	location "Wez"
@@ -72,7 +73,7 @@ project "Wez"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/WezEngine")
+			("{COPY} %{cfg.buildtarget.relpath}  \"../bin/" .. outputdir .. "/WezEngine/\"")
 		}
 
 	filter "configurations:Debug"
