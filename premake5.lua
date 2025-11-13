@@ -22,12 +22,11 @@ group "Dependencies"
 	include "Wez/vendor/imgui"
 
 group ""
-startproject "WezEngine"
-
 project "Wez"
 	location "Wez"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -139,3 +138,4 @@ project "WezEngine"
 	filter "configurations:Dist"
 		defines "WEZ_DIST"
 		buildoptions "/MD"
+		optimize "On"
